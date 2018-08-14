@@ -18,7 +18,7 @@ as the “Rule of 5”. will learned how to handle memory in C++ and avoid memor
 The goal of following assignment is to practice concurrent programming on Java 8 environment. This assignment
 requires a good understanding of Java Threads, Java Synchronization, Lambdas, and Callbacks. in addition this assigenment cover the following topics/tools : Json read&parse, Maven build, Concurrent DataBases, Junit test.
 
-# Assignment 3 - Server & Client: online movie rental service
+# Assignment 3 - Server & Client: Online movie rental service
 * In this assignment we will implement an online movie rental service
 server and client. The communication between the server and the client(s) will be
 performed using a text based communication protocol, which will support renting, listing
