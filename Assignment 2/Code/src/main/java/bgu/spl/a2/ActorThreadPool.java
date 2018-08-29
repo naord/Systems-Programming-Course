@@ -60,8 +60,8 @@ public class ActorThreadPool {
 	}
 
 	/**
-	 * thread try to get an action if there are any available actors
-	 * in case there are no available actors the thread is waiting to get notify
+	 * thread try to get an action if there are any available actors.
+	 * in case there are no available actors the thread is waiting to get notify.
 	 */
 	private void threadAction() {
 		Action action = null;
