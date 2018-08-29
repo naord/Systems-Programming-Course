@@ -31,7 +31,6 @@ public abstract class Action<R> {
      */
     protected abstract void start();
 
-
     /**
      * start/continue handling the action
      *
@@ -56,8 +55,6 @@ public abstract class Action<R> {
             isStarted.set(false);
             this.callback.call();
         }
-
-
     }
 
     /**
@@ -73,9 +70,9 @@ public abstract class Action<R> {
     protected final void then(Collection<? extends Action<?>> actions, final callback callback) {
         this.callback = callback;
         boolean tmp;
-        do{
+        do {
             tmp = isStarted.get();
-        }while(!(isStarted.compareAndSet(tmp, true)));
+        } while(!(isStarted.compareAndSet(tmp, true)));
         AtomicInteger leftActions = new AtomicInteger(actions.size());
         for(Action<?> action : actions){
             action.getResult().subscribe(()->{//subscribe callback that once action is resolved reduce counter of left actions once all the actions resolved subscribing the callback we need to do then
